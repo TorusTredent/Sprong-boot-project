@@ -2,13 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>Authorization</title>
 </head>
 <body>
-<form action="registration.html" th:action="@{/user/registration}" th:object="${newUser}" method="post">
+<form action="#" th:action="@{/user/authorization}" th:object="${user}" method="post">
     <input type="text" th:field="*{username}" placeholder="Username">
     <input type="text" th:field="*{password}" placeholder="Password">
-    <input type="text" th:field="*{name}" placeholder="Name">
     <button>Submit</button>
 </form>
 </body>

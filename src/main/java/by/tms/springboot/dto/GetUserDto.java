@@ -1,22 +1,21 @@
-package by.tms.springboot.entity;
+package by.tms.springboot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.NotBlank;
+
 @Component
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
-@Data
-public class User {
+public class GetUserDto {
 
-    private String name;
-
+    @NotBlank(message = "Field username is empty")
     private String username;
 
+    @NotBlank(message = "Field password is empty")
     private String password;
-
 }

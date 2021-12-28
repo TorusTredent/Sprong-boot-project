@@ -18,4 +18,8 @@ public class UserService {
         storage.save(user);
     }
 
+    public User existByUsername(String username) {
+        return storage.existByUsername(username);
+    }
+
 }

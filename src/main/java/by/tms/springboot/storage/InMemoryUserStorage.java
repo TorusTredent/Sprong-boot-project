@@ -11,7 +11,13 @@ public class InMemoryUserStorage {
 
     private static LinkedList<User> users = new LinkedList<>();
 
+
     public void save(User user) {
         users.addFirst(user);
+    }
+
+    public User existByUsername(String username) {
+        return users.stream().filter(user -> user.getUsername().contains(username))
+                .findFirst().orElse(null);
     }
 }
